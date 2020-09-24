@@ -1,10 +1,50 @@
 {% extends 'index.html'%}
 
 {% block content %}
-    <h1>Create New Account </h1>
-    <form method="POST">
+<div style='
+display: flex;
+flex-direction: column;
+background-color: #696969;
+width: 50%;
+height: 100vh;
+margin-bottom: 0;
+padding-top: 0;
+margin-left: auto;
+color: white;
+padding-left: 10px;
+font-family: "Times New Roman";
+'>
+    <h1 style='
+    margin: auto;
+    font-size: 48pt;
+    margin-top: 10px;
+    margin-bottom: 0;
+    '>Sign up </h1>
+    <form style='
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    text-align: start;
+    ' method="POST">
          {% csrf_token %}
         {{form.as_p}}
-        <button>Register</button>
+        <button style='
+        height: 30px;
+        width: 30%;
+        margin: auto;
+        color: white;
+        background-color: #2F4F4F;
+        border-radius: 5px;
+        border: none;
+        '>Sign up</button>
     </form>
+    <a 
+            style="
+                text-decoration: none;
+                font-size: 12pt; 
+                color: #FFFFFF;
+                " href="{% url 'login_url' %}">Sign in</a>
+</div>
 {% endblock %}
